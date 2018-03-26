@@ -25,7 +25,7 @@ By default, this command sets JSON properties in your project's ${chalk.bold(PRO
       options: [
         {
           name: 'format',
-          summary: 'Provide format you want to give. Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6',
+          summary: 'Provide format you are interested in. Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6',
           default: 'A4',
           type: String,
           aliases: ['f'],
