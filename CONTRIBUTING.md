@@ -1,7 +1,7 @@
 # Contributing
 
 :mega: **Support/Questions?**: Please see our [Support
-Page](https://ionicframework.com/support) for general support questions. The
+Page](https://ginvoicing.com/support) for general support questions. The
 issues on GitHub should be reserved for bug reports and feature requests.
 
 ### Bug Reports
@@ -9,7 +9,7 @@ issues on GitHub should be reserved for bug reports and feature requests.
 Run the command(s) with `--verbose` to produce debugging output. We may ask for
 the full command output, including debug statements.
 
-Please also copy/paste the output of the `ionic info` command into your issue
+Please also copy/paste the output of the `gi info` command into your issue
 and be as descriptive as possible. Include any steps that might help us
 reproduce your issue.
 
@@ -27,9 +27,9 @@ bug fixes are welcome any time.
 #### Help Wanted
 
 Looking for small issues to help with? You can browse the [`help
-wanted`](https://github.com/ionic-team/ionic-cli/labels/help%20wanted) label.
+wanted`](https://github.com/ginvoicing/cli/labels/help%20wanted) label.
 These are issues that have been marked as great opportunities for someone's
-first PR to the Ionic CLI. :heart_eyes:
+first PR to the Ginvoicing CLI. :heart_eyes:
 
 ### Local Setup
 
@@ -41,21 +41,16 @@ installed in their respective `packages/**/node_modules` directories.
 
 Each `packages/*` folder represents a package on npm.
 
-* [`packages/ionic`](https://github.com/ionic-team/ionic-cli/tree/master/packages/ionic):
-  Ionic CLI executable.
-* [`packages/@ionic/cli-utils`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/cli-utils):
-  Ionic CLI library and utilities.
-* [`packages/@ionic/cli-framework`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/cli-framework):
+* [`packages/ginvoicing`](https://github.com/ginvoicing/cli/tree/master/packages/ginvoicing):
+  Ginvoicing CLI executable.
+* [`packages/@ionic/cli-utils`](https://github.com/ginvoicing/cli/tree/master/packages/%40ionic/cli-utils):
+  Ginvoicing CLI library and utilities.
+* [`packages/@ionic/cli-framework`](https://github.com/ginvoicing/cli/tree/master/packages/%40ionic/cli-framework):
   Framework for command-line programs.
-* [`packages/@ionic/discover`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/discover):
-  Service discovery library used for `ionic serve` with the [Ionic
-  DevApp](https://ionicframework.com/docs/pro/devapp/).
-* [`packages/@ionic/schematics-angular`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/schematics-angular):
-  Ionic Angular v4+ schematics for `ionic generate`.
-* [`packages/@ionic/v1-toolkit`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/v1-toolkit):
-  Utility CLI for Ionic v1 Apps, used by `ionic serve`.
-* [`packages/@ionic/lab`](https://github.com/ionic-team/ionic-cli/tree/master/packages/%40ionic/lab):
-  Utility CLI for Ionic Lab, used by `ionic serve`.
+* [`packages/@ionic/discover`](https://github.com/ginvoicing/cli/tree/master/packages/%40ionic/discover):
+  Service discovery library used for `gi serve` with the [Ginvoicing
+  DevApp](https://ginvoicing.com/docs/pro/devapp/).
+* [`packages/@ionic/v1-toolkit`](https://github.com/ginvoicing/cli/tree/master/packages/%40ionic/v1-toolkit)
 
 #### Toolset
 
@@ -73,7 +68,7 @@ Each `packages/*` folder represents a package on npm.
 1. `npm install` to install the dev tools.
 1. `npm run bootstrap` (will install package dependencies and link packages
    together)
-1. Optionally `npm run link` to make `ionic` and other bin files point to your
+1. Optionally `npm run link` to make `gi` and other bin files point to your
    dev CLI.
 1. `npm run watch` will spin up TypeScript watch scripts for all packages.
 1. TypeScript source files are in `packages/**/src`.
@@ -85,7 +80,7 @@ Each `packages/*` folder represents a package on npm.
 Switch to dev CLI:
 
 ```bash
-$ npm uninstall -g ionic
+$ npm uninstall -g ginvoicing
 $ npm run link
 ```
 
@@ -93,7 +88,7 @@ Switch back to stable CLI:
 
 ```bash
 $ npm run unlink
-$ npm install -g ionic
+$ npm install -g ginvoicing
 ```
 
 ##### Code Structure

@@ -1,8 +1,8 @@
 <!-- 🚨 PLEASE READ 🚨
 
-This issue tracker is for bug reports and feature requests for the Ionic CLI.
+This issue tracker is for bug reports and feature requests for the Ginvoicing CLI.
 
-- For support questions, see our support page: https://ionicframework.com/support
+- For support questions, see our support page: https://ginvoicing.com/support
 - For feature requests, feel free to delete this template and just describe the feature.
 
 -->
@@ -28,10 +28,10 @@ Remember to run commands with the --verbose flag for debug statements.
 
 
 
-**My `ionic info`:**
+**My ig info`:**
 <!--
-Post the output of running `ionic info` (within your project, if applicable)
-below. `ionic info` is a CLI command that prints out environment information.
+Post the output of running `gi info` (within your project, if applicable)
+below. `gi info` is a CLI command that prints out environment information.
 -->
 
 ```

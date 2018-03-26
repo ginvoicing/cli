@@ -8,7 +8,7 @@
 The ginvoicing command line interface (CLI) is your go-to tool for developing
 [ginvoicing][ginvoicing-homepage] apps.
 
-We have several branches for CLI versions:
+Current development branch of CLI versions:
 
 * [`master`](https://github.com/ginvoicing/cli) (alpha): `npm install
   -g ginvoicing@canary`
