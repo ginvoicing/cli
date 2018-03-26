@@ -2,10 +2,14 @@
 
 'use strict';
 
+const path = require('path');
+const os = require('os');
+
 // IMPORTANT: This file uses ES5 syntax to avoid syntax errors in older Node
 // versions (mostly 0.12). See https://node.green for syntax support.
 
-process.title = 'ionic';
+process.title = 'gi';
+
 process.on('unhandledRejection', function(r) { console.error(r); });
 
 var events = require('events');
@@ -37,6 +41,9 @@ if (process.argv.includes('--no-color')) {
 var bootstrap = require('@ionic/cli-utils/bootstrap');
 
 var pargv = process.argv.slice(2);
+
+// Create defult configurations directory at default location given by ionic core
+process.env.IONIC_CONFIG_DIRECTORY = path.resolve(os.homedir(), '.ginvoicing');
 
 bootstrap.detectLocalCLI()
   .then(function(localPath) {
