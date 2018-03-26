@@ -1,6 +1,6 @@
 {
   "name": "ginvoicing",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0-rc.1",
   "description": "A CLI tool containing ginvoicing business logics to create invoices, vouchers etc.",
   "homepage": "https://ginvoicing.com",
   "author": "Ginvoicing Team <support@ginvoicing.com> (https://ginvoicing.com) ",
@@ -39,8 +39,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ionic/cli-framework": "1.0.0-rc.0",
-    "@ionic/cli-utils": "2.0.0-rc.0",
+    "@ionic/cli-framework": "1.0.0-rc.1",
+    "@ionic/cli-utils": "2.0.0-rc.1",
     "chalk": "^2.3.0",
     "debug": "^3.1.0",
     "lodash": "^4.17.5",
