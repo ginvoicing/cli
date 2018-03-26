@@ -9,7 +9,7 @@ import { APIResponseSuccess, CommandLineInputs, CommandLineOptions, CommandMetad
 import { Command } from '@ionic/cli-utils/lib/command';
 import { FatalException } from '@ionic/cli-utils/lib/errors';
 
-const debug = Debug('ionic:cli:commands:monitoring:syncmaps');
+const debug = Debug('ginvoicing:cli:commands:monitoring:syncmaps');
 
 const SOURCEMAP_DIRECTORY = '.sourcemaps';
 

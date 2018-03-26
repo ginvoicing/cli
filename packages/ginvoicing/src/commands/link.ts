@@ -8,7 +8,7 @@ import { Command } from '@ionic/cli-utils/lib/command';
 import { FatalException } from '@ionic/cli-utils/lib/errors';
 import { runCommand } from '@ionic/cli-utils/lib/executor';
 
-const debug = Debug('ionic:cli:commands:link');
+const debug = Debug('ginvoicing:cli:commands:link');
 
 const CHOICE_CREATE_NEW_APP = 'createNewApp';
 const CHOICE_NEVERMIND = 'nevermind';

@@ -22,7 +22,7 @@ import { FatalException } from '@ionic/cli-utils/lib/errors';
 
 import { CordovaCommand } from './base';
 
-const debug = Debug('ionic:cli:commands:cordova:resources');
+const debug = Debug('ginvoicing:cli:commands:cordova:resources');
 
 const AVAILABLE_RESOURCE_TYPES = ['icon', 'splash'];
 

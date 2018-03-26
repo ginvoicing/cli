@@ -6,11 +6,12 @@ import { CommandMetadata, CommandMetadataInput, CommandMetadataOption, HydratedC
 import { CommandGroup, NamespaceGroup, OptionGroup } from '../constants';
 
 const IONIC_LOGO = String.raw`
-   _             _
-  (_) ___  _ __ (_) ___
-  | |/ _ \| '_ \| |/ __|
-  | | (_) | | | | | (__
-  |_|\___/|_| |_|_|\___|`;
+    ____ ___                 _      _
+   / ___|_ _|_ ____   _____ (_) ___(_)_ __   __ _
+  | |  _ | || '_ \ \ / / _ \| |/ __| | '_ \ / _' |
+  | |_| || || | | \ V / (_) | | (__| | | | | (_| |
+   \____|___|_| |_|\_/ \___/|_|\___|_|_| |_|\__, |
+                                            |___/ `;
 
 type Decoration = [number, string];
 

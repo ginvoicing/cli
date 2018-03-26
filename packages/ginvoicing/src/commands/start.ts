@@ -16,7 +16,7 @@ import { runCommand } from '@ionic/cli-utils/lib/executor';
 import { prettyProjectName } from '@ionic/cli-utils/lib/project';
 import { emoji } from '@ionic/cli-utils/lib/utils/emoji';
 
-const debug = Debug('ionic:cli:commands:start');
+const debug = Debug('ginvoicing:cli:commands:start');
 
 export class StartCommand extends Command implements CommandPreRun {
   canRemoveExisting?: boolean;

@@ -6,7 +6,6 @@ import { prettyPath } from '@ionic/cli-framework/utils/format';
 
 import { CommandLineInputs, CommandLineOptions, CommandMetadata, IBaseConfig, PROJECT_FILE } from '@ionic/cli-utils';
 import { Command } from '@ionic/cli-utils/lib/command';
-import { FatalException } from '@ionic/cli-utils/lib/errors';
 
 export class ConfigUnsetCommand extends Command {
   async getMetadata(): Promise<CommandMetadata> {
@@ -17,7 +16,7 @@ export class ConfigUnsetCommand extends Command {
       description: `
 By default, this command deletes properties in your project's ${chalk.bold(PROJECT_FILE)} file.
 
-For ${chalk.green('--global')} config, the CLI deletes properties in the global CLI config file (${chalk.bold('~/.ionic/config.json')}).
+The CLI deletes properties in the CLI config file (${chalk.bold('~/.ginvoicing/config.json')}).
 
 For nested properties, separate nest levels with dots. For example, the property name ${chalk.green('user.email')} will look in the ${chalk.bold('user')} object (a root-level field in the global CLI config file) for the ${chalk.bold('email')} field.
       `,
@@ -28,27 +27,14 @@ For nested properties, separate nest levels with dots. For example, the property
           validators: [validators.required],
         },
       ],
-      options: [
-        {
-          name: 'global',
-          summary: 'Use global CLI config',
-          type: Boolean,
-          aliases: ['g'],
-        },
-      ],
-      exampleCommands: ['', 'type', '--global git.setup', '-g interactive'],
+      exampleCommands: ['', 'type'],
     };
   }
 
   async run(inputs: CommandLineInputs, options: CommandLineOptions): Promise<void> {
     const [ p ] = inputs;
-    const { global } = options;
 
-    if (!global && !this.env.project.directory) {
-      throw new FatalException(`Sorry--this won't work outside an Ionic project directory. Did you mean to print global config using ${chalk.green('--global')}?`);
-    }
-
-    const file: IBaseConfig<object> = global ? this.env.config : this.env.project;
+    const file: IBaseConfig<object> = this.env.config;
 
     const config = await file.load();
     const propertyExists = lodash.has(config, p);

@@ -4,36 +4,23 @@ import * as lodash from 'lodash';
 import { validators } from '@ionic/cli-framework';
 import { prettyPath } from '@ionic/cli-framework/utils/format';
 
-import { CommandLineInputs, CommandLineOptions, CommandMetadata, IBaseConfig, OptionGroup, PROJECT_FILE } from '@ionic/cli-utils';
+import { CommandLineInputs, CommandLineOptions, CommandMetadata, IBaseConfig, PROJECT_FILE } from '@ionic/cli-utils';
 import { Command } from '@ionic/cli-utils/lib/command';
 import { FatalException } from '@ionic/cli-utils/lib/errors';
 
-export class ConfigSetCommand extends Command {
+export class VoucherCreateCommand extends Command {
   async getMetadata(): Promise<CommandMetadata> {
     return {
-      name: 'set',
+      name: 'create',
       type: 'global',
-      summary: 'Set config values',
+      summary: 'It will return json calculated invoice',
       description: `
 By default, this command sets JSON properties in your project's ${chalk.bold(PROJECT_FILE)} file.
-
-The CLI sets properties in the CLI config file (${chalk.bold('~/.ginvoicing/config.json')}).
-
-For nested properties, separate nest levels with dots. For example, the property name ${chalk.green('user.email')} will look in the ${chalk.bold('user')} object (a root-level field in the global CLI config file) for the ${chalk.bold('email')} field.
-
-${chalk.green('ginvoicing config set')} will attempt to coerce ${chalk.green('value')} into a suitable JSON type. If it is JSON-parsable, such as ${chalk.green('true')} or ${chalk.green('[]')}, it takes the parsed result. Otherwise, the value is interpreted as a string. For stricter input, use ${chalk.green('--json')}, which will error with non-JSON values.
-
-By default, if ${chalk.green('property')} exists and is an object or an array, the value is not overwritten. To disable this check and always overwrite the property, use ${chalk.green('--force')}.
       `,
       inputs: [
         {
-          name: 'property',
-          summary: 'The property name you wish to set',
-          validators: [validators.required],
-        },
-        {
-          name: 'value',
-          summary: 'The new value of the given property',
+          name: 'voucher',
+          summary: 'Valid JSON object of Voucher.',
           validators: [validators.required],
         },
       ],
@@ -43,12 +30,6 @@ By default, if ${chalk.green('property')} exists and is an object or an array, t
           summary: `Always interpret ${chalk.green('value')} as JSON`,
           type: Boolean,
           aliases: ['j'],
-        },
-        {
-          name: 'force',
-          summary: 'Always overwrite existing values',
-          type: Boolean,
-          groups: [OptionGroup.Advanced],
         },
       ],
       exampleCommands: ['name newAppName', 'name "\\"newAppName\\"" --json'],

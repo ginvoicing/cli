@@ -12,9 +12,9 @@ import { IPCMessage, IonicContext, generateIonicEnvironment, isExitCodeException
 import { Executor } from '@ionic/cli-utils/lib/executor';
 import { mapLegacyCommand, modifyArguments } from '@ionic/cli-utils/lib/init';
 
-import { IonicNamespace } from './commands';
+import { GinvoicingNamespace } from './commands';
 
-const debug = Debug('ionic:cli');
+const debug = Debug('ginvoicing:cli');
 
 const PACKAGE_ROOT_PATH = path.dirname(path.dirname(__filename));
 const PACKAGE_JSON_PATH = path.resolve(PACKAGE_ROOT_PATH, 'package.json');
@@ -51,7 +51,7 @@ export async function generateContext(): Promise<IonicContext> {
 
 export async function loadExecutor(ctx: IonicContext, pargv: string[], env: { [k: string]: string; }): Promise<Executor> {
   if (!_executor) {
-    const namespace = new IonicNamespace(undefined, await generateIonicEnvironment(ctx, pargv, env));
+    const namespace = new GinvoicingNamespace(undefined, await generateIonicEnvironment(ctx, pargv, env));
     _executor = new Executor({ namespace });
   }
 
