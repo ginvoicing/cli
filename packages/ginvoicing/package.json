@@ -45,6 +45,7 @@
     "debug": "^3.1.0",
     "lodash": "^4.17.5",
     "opn": "^5.2.0",
+    "puppeteer": "^1.2.0",
     "semver": "^5.5.0",
     "tslib": "^1.9.0",
     "update-notifier": "^2.3.0"
@@ -54,6 +55,7 @@
     "@types/lodash": "^4.14.104",
     "@types/node": "^6.0.101",
     "@types/opn": "^5.1.0",
+    "@types/puppeteer": "^1.2.0",
     "@types/update-notifier": "^2.0.0",
     "jest": "^22.4.2",
     "jest-cli": "^22.4.2",
