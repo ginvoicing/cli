@@ -11,7 +11,7 @@ export class GinvoicingNamespace extends Namespace {
   async getNamespaces(): Promise<NamespaceMap> {
     return new NamespaceMap([
       ['config', async () => { const { ConfigNamespace } = await import('./config/index'); return new ConfigNamespace(this, this.env); }],
-      ['voucher', async () => { const { VoucherNamespace } = await import('./voucher/index'); return new VoucherNamespace(this, this.env); }],
+      ['pdf', async () => { const { PDFNamespace } = await import('./pdf/index'); return new PDFNamespace(this, this.env); }],
     ]);
   }
 
