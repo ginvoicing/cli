@@ -25,7 +25,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "packages/@ionic/v1-toolkit/package.json" }}
       - restore_cache:
-          key: dependency-cache-{{ checksum "packages/ionic/package.json" }}
+          key: dependency-cache-{{ checksum "packages/ginvoicing/package.json" }}
       - run: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
@@ -65,9 +65,9 @@ jobs:
           paths:
             - packages/@ionic/v1-toolkit/node_modules
       - save_cache:
-          key: dependency-cache-{{ checksum "packages/ionic/package.json" }}
+          key: dependency-cache-{{ checksum "packages/ginvoicing/package.json" }}
           paths:
-            - packages/ionic/node_modules
+            - packages/ginvoicing/node_modules
       - run: npm run lint
       - run: npm run test
       # - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
