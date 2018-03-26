@@ -3,7 +3,7 @@ import { CommandMap, Namespace, NamespaceMap } from '@ionic/cli-utils/lib/namesp
 export class GinvoicingNamespace extends Namespace {
   async getMetadata() {
     return {
-      name: 'ginvoicing',
+      name: 'gi',
       summary: '',
     };
   }
