@@ -22,7 +22,7 @@ describe('ionic', () => {
       it('should have expected path for bin script', async () => {
         const { binPath } = await generateContext();
         const pathParts = lodash.takeRight(binPath.split(path.sep), 2);
-        expect(pathParts).toEqual(['bin', 'ionic']);
+        expect(pathParts).toEqual(['bin', 'gi']);
       });
 
       it('should have expected path for main script', async () => {

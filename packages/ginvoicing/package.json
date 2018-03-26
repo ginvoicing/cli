@@ -1,11 +1,11 @@
 {
-  "name": "ionic",
-  "version": "4.0.0-rc.0",
-  "description": "A tool for creating and developing Ionic Framework mobile apps.",
-  "homepage": "https://ionicframework.com",
-  "author": "Ionic Team <hi@ionic.io> (https://ionicframework.com) ",
+  "name": "ginvoicing",
+  "version": "1.0.0-rc.0",
+  "description": "A CLI tool containing ginvoicing business logics to create invoices, vouchers etc.",
+  "homepage": "https://ginvoicing.com",
+  "author": "Ginvoicing Team <support@ginvoicing.com> (https://ginvoicing.com) ",
   "bin": {
-    "ionic": "./bin/ionic"
+    "ionic": "./bin/gi"
   },
   "engines": {
     "node": ">=6.4.0"
@@ -25,22 +25,17 @@
     "dist/"
   ],
   "keywords": [
-    "ionic",
-    "ionic framework",
-    "ionicframework",
+    "ginvoicing",
+    "ginvoicing framework",
     "mobile",
-    "app",
-    "hybrid",
-    "cordova",
-    "native",
-    "phonegap"
+    "desktop"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic-cli.git"
+    "url": "https://github.com/ginvoicing/cli.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/ionic-cli/issues"
+    "url": "https://github.com/ginvoicing/cli/issues"
   },
   "license": "MIT",
   "dependencies": {
