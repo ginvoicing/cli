@@ -13,7 +13,7 @@ These commands are used to programmatically read, write, and delete CLI and proj
 
 By default, these commands use your project's ${chalk.bold(PROJECT_FILE)} file.
 
-To use these commands for the global CLI config file (${chalk.bold('~/.ginvoicing/config.json')}), use the ${chalk.green('--global')} flag.
+To use these commands for the global CLI config file (${chalk.bold(process.env.IONIC_CONFIG_DIRECTORY + '/config.json')}), use the ${chalk.green('--global')} flag.
       `,
     };
   }

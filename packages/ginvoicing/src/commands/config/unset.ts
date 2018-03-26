@@ -16,7 +16,7 @@ export class ConfigUnsetCommand extends Command {
       description: `
 By default, this command deletes properties in your project's ${chalk.bold(PROJECT_FILE)} file.
 
-The CLI deletes properties in the CLI config file (${chalk.bold('~/.ginvoicing/config.json')}).
+The CLI deletes properties in the CLI config file (${chalk.bold(process.env.IONIC_CONFIG_DIRECTORY + '/config.json')}).
 
 For nested properties, separate nest levels with dots. For example, the property name ${chalk.green('user.email')} will look in the ${chalk.bold('user')} object (a root-level field in the global CLI config file) for the ${chalk.bold('email')} field.
       `,
