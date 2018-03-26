@@ -57,7 +57,7 @@ bootstrap.detectLocalCLI()
       throw err;
     }
 
-    process.env.IONIC_CLI_LOCAL_ERROR = err;
+    //process.env.IONIC_CLI_LOCAL_ERROR = err;
     process.env.IONIC_CLI_BIN = __filename;
 
     return cli.run(pargv, process.env);
